@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Finanziamenti e Noleggi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>PWA Finanziamenti e Noleggi</h1>
+
+    <label for="importo">Inserisci l'importo:</label>
+    <input type="number" id="importo" placeholder="Es. 3500">
+
+    <label for="tipoTabella">Seleziona il tipo di finanziamento:</label>
+    <select id="tipoTabella">
+        <option value="agevolato">Finanziamento Agevolato</option>
+        <option value="noleggio_mensile">Noleggio Mensile</option>
+        <option value="ordinario">Finanziamento Ordinario</option>
+        <option value="noleggio_trimestrale">Noleggio Trimestrale</option>
+    </select>
+
+    <label for="periodo">Seleziona il periodo:</label>
+    <select id="periodo">
+        <option value="12">12 Mesi</option>
+        <option value="24">24 Mesi</option>
+        <option value="36">36 Mesi</option>
+        <option value="48">48 Mesi</option>
+        <option value="60">60 Mesi</option>
+    </select>
+
+    <button onclick="calcolaRata()">Calcola</button>
+
+    <div id="risultati">
+        <p>Rata mensile: <span id="rata"></span></p>
+        <p>Spese contratto: <span id="spese"></span></p>
+        <p>Costo giornaliero: <span id="costo_giornaliero"></span></p>
+        <p>Costo orario: <span id="costo_orario"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
